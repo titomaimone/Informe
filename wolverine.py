@@ -36,8 +36,8 @@ def run_script(script_name, script_args):
     try:
         result = subprocess.check_output(subprocess_args, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
-        return e.output.decode("utf-8"), e.returncode
-    return result.decode("utf-8"), 0
+        return e.output.decode("latin1"), e.returncode
+    return result.decode("latin1"), 0
 
 
 def json_validated_response(model, messages):

@@ -26,7 +26,7 @@ def calculate(operation, num1, num2):
     else:
         print("Invalid operation")
 
-    return result
+    return res
 
 
 if __name__ == "__main__":
